@@ -1,15 +1,10 @@
-let student1Courses = ['Math', 'English', 'Programming'];
+function returnCommonElement() {    
+    let student1Courses = ['Math', 'English', 'Programming'];
+    let student2Courses = ['Geography', 'Spanish', 'Programming'];
 
-let student2Courses = ['Geography', 'Spanish', 'Programming'];
-
-function uniteArrays() {    
-    let student3Courses = student1Courses.concat(student2Courses);
-
-    console.log(student3Courses);    
-
-    let studentCourses = student3Courses.join('');
-    console.log(studentCourses);
-    return studentCourses;
+    let studentCourses = student1Courses.filter (value => student2Courses.includes(value));
+    return studentCourses;    
 }
 
-uniteArrays()
+let result = returnCommonElement();
+console.log(result);
