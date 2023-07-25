@@ -1,18 +1,14 @@
-let sequence = [1, 1000];
-sequence.length = 1000;
+function showNumbers1(number) {    
+    let sequence1 = new Array(1000);    
     
-
-function showNumbers(number) {    
-    for (let i = 0; i <= 1000; i++) {
-        sequence[i] = i;
+    for (let i = 1; i <= 1000; i++) {
+        sequence1[i] = i;
     }
 
-    sequence.splice(0, 1);
-
-    if (number >= 1000) {
-        console.log(sequence);
-        return sequence;
+    if (number >= 0) {        
+        return sequence1;
     }
 } 
 
-showNumbers(1000);
+let result1 = showNumbers1(1000);
+console.log(result1);
